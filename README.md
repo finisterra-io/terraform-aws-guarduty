@@ -60,5 +60,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_arn"></a> [arn](#output\_arn) | The ARN of the GuardDuty Detector |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

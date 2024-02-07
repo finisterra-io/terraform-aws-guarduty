@@ -1,4 +1,4 @@
 output "arn" {
-  value       = aws_guardduty_detector.this[0].arn
+  value       = aws_guardduty_detector.this.arn
   description = "The ARN of the GuardDuty Detector"
 }

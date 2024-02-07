@@ -14,17 +14,17 @@ variable "datasources" {
   description = "A data source configuration for enabling and configuring certain data sources within GuardDuty."
   type = object({
     s3_logs = object({
-      enable = optional(bool, false)
+      enable = bool
     }),
     kubernetes = object({
       audit_logs = object({
-        enable = optional(bool, false)
+        enable = bool
       })
     }),
     malware_protection = object({
       scan_ec2_instance_with_findings = object({
         ebs_volumes = object({
-          enable = optional(bool, false)
+          enable = bool
         })
       })
     })

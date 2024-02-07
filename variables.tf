@@ -14,17 +14,17 @@ variable "datasources" {
   description = "A data source configuration for enabling and configuring certain data sources within GuardDuty."
   type = object({
     s3_logs = object({
-      enable = bool
+      enable = optional(bool, false)
     }),
     kubernetes = object({
       audit_logs = object({
-        enable = bool
+        enable = optional(bool, false)
       })
     }),
     malware_protection = object({
       scan_ec2_instance_with_findings = object({
         ebs_volumes = object({
-          enable = bool
+          enable = optional(bool, false)
         })
       })
     })
@@ -47,7 +47,6 @@ variable "datasources" {
     }
   }
 }
-
 
 variable "detector_tags" {
   description = "The tags to be applied to the GuardDuty detector resource."
